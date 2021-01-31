@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+         
+
+	<!-- Add your configuration here -->	
+	<servlet>
+		<servlet-name>HelloWorldServlet</servlet-name>
+		<servlet-class>com.braun.servlets.HelloWorldServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>DisplayAllBooksServlet</servlet-name>
+		<servlet-class>com.braun.servlets.DisplayAllBooksServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>FindBooksByAuthorServlet</servlet-name>
+		<servlet-class>com.braun.servlets.FindBooksByAuthorServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>AddNewBookServlet</servlet-name>
+		<servlet-class>com.braun.servlets.AddNewBookServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>AddToCartServlet</servlet-name>
+		<servlet-class>com.braun.servlets.AddToCartServlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>ViewCartServlet</servlet-name>
+		<servlet-class>com.braun.servlets.ViewCartServlet</servlet-class>
+	</servlet>
+
+	<!--MAPPINGS	-->
+	<servlet-mapping>
+		<servlet-name>HelloWorldServlet</servlet-name>
+		<url-pattern>/hello-everyone</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>DisplayAllBooksServlet</servlet-name>
+		<url-pattern>/all-books</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>FindBooksByAuthorServlet</servlet-name>
+		<url-pattern>/find-author</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>AddNewBookServlet</servlet-name>
+		<url-pattern>/add-new-book</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddToCartServlet</servlet-name>
+		<url-pattern>/add-to-cart</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ViewCartServlet</servlet-name>
+		<url-pattern>/view-cart</url-pattern>
+	</servlet-mapping>
+
+	<session-config>
+		<session-timeout>4000</session-timeout>
+	</session-config>
+</web-app>
